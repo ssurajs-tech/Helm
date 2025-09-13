@@ -52,12 +52,6 @@ A **Kubernetes Deployment YAML file** and a **Helm deployment template** both de
 ### Summary Points
 - **Kubernetes Deployment YAML** is ideal for simple, static configurations.[3][1]
 - **Helm** is powerful for production setups needing dynamic values and consistent deployment across multiple environments.[4][5]
-- Both formats should use valid field names: note that "apiVerion" in your sample should be "apiVersion", and "fronend" should be "frontend".[3][1]
-
-For reliability, always ensure:
-- Template and selector labels match.
-- Containers and versions are spelled correctly.
-- Field names are accurate ("apiVersion", not "apiVerion").[6]
 
 [1](https://spacelift.io/blog/kubernetes-deployment-yaml)
 [2](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
