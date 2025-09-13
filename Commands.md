@@ -27,13 +27,19 @@ This file contains a list of common **Helm commands** used for managing Helm cha
 Manage Helm chart repositories.
 
 # List all Helm chart repositories
+```
 helm repo list
+```
 
 # Add a new Helm chart repository
+```
 helm repo add stable https://charts.helm.sh/stable
+```
 
 # Remove a Helm chart repository
+```
 helm repo remove stablehel
+```
 
 ---
 
