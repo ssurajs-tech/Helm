@@ -1,7 +1,5 @@
 
 ***
-
-```markdown
 # Helm Commands Guide
 
 This file contains a list of common **Helm commands** used for managing Helm charts and releases. Each section details relevant commands grouped by their functionality.  
@@ -28,7 +26,6 @@ This file contains a list of common **Helm commands** used for managing Helm cha
 ## Repository Management
 Manage Helm chart repositories.
 
-```
 # List all Helm chart repositories
 helm repo list
 
