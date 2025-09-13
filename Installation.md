@@ -12,6 +12,7 @@ This guide provides step-by-step instructions to install and set up **Docker**, 
 - [Verify the installation](#verify-the-installation)  
 - [Create Your First Helm Chart](#create-your-first-helm-chart)  
 - [Check version of the helm](#check-version-of-the-helm)  
+- [Uninstall helm](#Uninstall-helm)
 
 ***
 
@@ -87,3 +88,9 @@ helm install testchart2 stable/tomcat --set service.type=NodePort
 helm version
 ```
 
+## Uninstall helm 
+```bash
+which helm
+rm -rf /usr/local/bin/helm
+kubectl get all
+```
