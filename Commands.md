@@ -34,7 +34,6 @@ helm repo add stable https://charts.helm.sh/stable
 
 # Remove a Helm chart repository
 helm repo remove stablehel
-```
 
 ---
 
@@ -63,37 +62,44 @@ helm show all stable/tomcat
 ## Installing Charts
 Install applications from Helm charts with advanced configuration options.
 
-```
 # Install a chart with a wait and timeout
+```
 helm install mychart stable/charts --wait --timeout 10S
-
+```
 # Install Jenkins chart
+```
 helm install testjenkins stable/jenkins 
-
+```
 # Dry-run installation of Tomcat chart
+```
 helm install --dry-run testchart stable/tomcat 
-
+```
 # Install Tomcat chart with wait and timeout
+```
 helm install --wait --timeout 20s testtomcat stable/tomcat
 ```
 
-There are two ways to pass configuration data during install:
+## There are two ways to pass configuration data during install:
 
-```
+
 # Install a chart with a specific service type
+```
 helm install mychart stable/mychart --set service.type=NodePort
-
+```
 # Install a Tomcat server chart with a specific service type
+```
 helm install tomcatserver stable/tomcat --set master.service=NodePort
-
+```
 # Install a chart from a local package
+```
 helm install mychart tomcat-0.4.3.tgz
-
+```
 # Install a chart from a URL
+```
 helm install mychart <URL>
 ```
 
-Additional commands:
+## Additional commands:
 
 ```
 helm install testtomcat stable/tomcat
@@ -135,13 +141,13 @@ helm list
 ## Viewing Release Status
 Display the status of a Helm release.
 
-```
 # Display status of a specific release
+```
 helm status <release-name>
-
+```
 # Example: status of "mychart" release
+```
 helm status mychart
-
 helm status mysql 
 ```
 
@@ -170,25 +176,16 @@ helm delete testtomcat
 Upgrade an existing Helm release.
 
 ```
-helm history
-helm history testchart
-
-# Upgrade a release
-helm upgrade testchart
-helm upgrade testchart stable/tomcat
-
-helm history testchart
+helm install mysql01 bitnami/mysql
+helm list
+helm upgrade mysql01 bitnami/mysql
 ```
-
 ---
 
 ## Rolling Back Releases
 Roll back a Helm release to a previous version.
 
 ```
-helm install mysql01 bitnami/mysql
-helm list
-helm upgrade mysql01 bitnami/mysql
 helm list
 helm history mysql01
 helm rollback mysql01
